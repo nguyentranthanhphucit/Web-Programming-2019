@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML-Forms-and-Frames-NguyenTranThanhPhuc</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			label {
+				font-weight: bold;
+				color: red;
+			}
+			button:hover {
+				background-color: lightblue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="color:blue; text-align:center;">HTML-Forms-and-Frames-<mark>NguyenTranThanhPhuc</mark></h1>
+		<form name="myForm" method="get" action="https://vnexpress.net/">
+			<h3 style="color: #154360;">Sending data to vnexpress's website</h3>
+			<table border="1" cellpadding="5">
+				<colgroup>
+					<col width="150px">
+					<col width="200px">
+				</colgroup>
+				<tr>
+					<td><label for="labelTitle"><h5>Title</h5></label></td>
+					<td><input type="text" name="title" required id="labelTitle" tabindex="1"></td>
+				</tr>
+				<tr>
+					<td><label for="labelContent"><h5>Feedback content from unknown user</h5></label></td>
+					<td><textarea name="content" id="labelContent" tabindex="2"></textarea></td>
+				</tr>
+				<tr>
+					<td><label for="labelGender"><h5>Gender</h5></label></td>
+					<td>
+						<input type="radio" name="gender" value="male" id="labelGender">Male<br>
+						<input type="radio" name="gender" value="memale" checked="">Female<br>
+						<input type="radio" name="gender" value="others">Others
+					</td>
+				</tr>
+				<tr>
+					<td><label for="labelFeedback"><h5>Feedback categories</h5></label></td>
+					<td>
+						<select name="feedbackCategories">
+							<option value="polity">Polity</option>
+							<option value="sports">Sports</option>
+							<option value="music">Music</option>
+							<option value="it">IT</option>
+							<option selected="" value="game" id="labelFeedback">Game</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="labelFarvorite"><h5>Your Favorite</h5></label></td>
+					<td>
+						<fieldset>
+							<legend><b>Check favorites</b></legend>
+							<input type="checkbox" name="favorite" value="listenToMusic" id="labelFarvorite">Listen to music<br>
+							<input type="checkbox" checked="" name="favorite" value="chess">Chess<br>
+							<input type="checkbox" name="favorite" value="playGame">Play Game<br>
+							<input type="checkbox" name="favorite" value="sing">Sing<br>
+							<input type="checkbox" name="favorite" value="dance">Dance
+						</fieldset>
+					</td>
+				</tr>
+				<input type="hidden" name="fullName" value="NguyenTranThanhPhuc">
+				<tr>
+					<td><label for="labelEmail"><h5>Email</h5></label></td>
+					<td><input type="email" name="email" required id="labelEmail" tabindex="3"></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+						<button name="btnSubmit">Submit</button>
+						<button name="btnReset">Reset</button>
+					</td>
+				</tr>
+			</table>
+			<hr>
+			<h3 style="color: #212F3D;">SƠN TÙNG M-TP | GIVE IT TO ME ft. Snoop Dogg | Official MV</h3>
+			<iframe
+				name="iframeYoutube"
+				width="560" 
+				height="315" 
+				src="https://www.youtube.com/embed/knW7-x7Y7RE"
+				frameborder="yes"
+				scrolling="yes" 
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+			</iframe>
+		</form>
+	</body>
+</html>

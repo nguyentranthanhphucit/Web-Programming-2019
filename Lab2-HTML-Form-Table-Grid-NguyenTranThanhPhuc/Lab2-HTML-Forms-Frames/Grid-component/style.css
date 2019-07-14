@@ -1,0 +1,10 @@
+.columnHeader {
+	background-color: #99ACBD;
+}
+table {
+	border-collapse: collapse;
+	width: 80%;
+}
+.textRight {
+	text-align: right;
+}

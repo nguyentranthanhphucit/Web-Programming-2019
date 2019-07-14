@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML-Forms-and-Frames-NguyenTranThanhPhuc</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<h1>Problem 1: Registration form</h1>
+		<table border="1" cellpadding="5" class="tableFather">
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbLastName">Last Name</label></td>
+				<td><input type="text" id="lbLastName" name="txtLastName" value="Nakov" style="width: 98%"></td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbFirstName">First Name</label></td>
+				<td><input type="text" id="lbFirstName" name="txtFirstName" value="Svetlin" style="width: 98%"></td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbAddress">Address</label></td>
+				<td><textarea type="text" id="lbAddress" name="txtAddress">17 Hristo Botev Str.floor 3,
+				apt. 12</textarea></td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbCity">City</label></td>
+				<td>
+					<table>
+						<tr>
+							<td colspan="3"><input type="text" id="lbCity" name="lbCity"></td>
+							<td><label for="lbState">State</label></td>
+							<td><input type="text" id="lbState" name="txtState" style="width: 50px"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbZipCode">Zip/Postal Code</label></td>
+				<td><input type="text" id="lbZipCode" name="txtZipcode" value="9325" style="width: 50px"></td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbCountry">Country</label></td>
+				<td>
+					<select style="width: 69%" id="lbCountry">
+						<option value="Barzil">Barzil</option>
+						<option value="ThaiLand">ThaiLand</option>
+						<option selected value="Bulgaria">Bulgaria</option>
+						<option value="France">France</option>
+						<option value="VietNam">Viet Nam</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbPhone">Phone (country code, area code, number</label></td>
+				<td>
+					<table>
+						<tr>
+							<td>(+</td>
+							<td><input type="text" id="lbPhone" name="txtHeadNumber" value="359" style="width: 40px"></td>
+							<td>)</td>
+							<td><input type="text" name="txtBodyNumber" value="88" style="width: 40px"></td>
+							<td>-</td>
+							<td><input type="text" name="txtEndNumber" value="8334343" style="width: 120px"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbEmail">Email</label></td>
+				<td><input type="Email" id="lbEmail" name="txtEmail" style="width: 98%" value="nakov@kaspichan.org"></td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbBirthDate">Birth date</label></td>
+				<td>
+					<table>
+						<tr>
+							<td><label for="lbMonth">Month</label></td>
+							<td><input type="text" id="lbMonth" name="txtMonth" style="width: 20px"></td>
+							<td><label for="lbDay">Day</label></td>
+							<td><input type="text" id="lbDay" name="txtDay" style="width: 20px"></td>
+							<td><label for="lbYear">Year(4 digit)</label></td>
+							<td><input type="text" id="lbYear" name="txtYear" style="width: 35px"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbGender">Gender</label></td>
+				<td>
+					<select id="lbGender">
+						<option selected value="Male">Male</option>
+						<option value="Female">Female</option>
+						<option value="Others">Others</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbStartingDate">Starting date</label></td>
+				<td>
+					<table>
+						<tr>
+							<td><input type="radio" checked name="radStartingDate" value="Spring">Spring 2016</td>
+							<td><input type="radio" name="radStartingDate" value="Summer">Summer 2016</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="lbTextAlignRight"><label for="lbCommentsQuestions">Comments/Questions</label></td>
+				<td><textarea type="text" id="lbCommentsQuestions" name="txtCommentsQuestions">Please send me more information about the logging.</textarea></td>
+			</tr>
+			<tr class="backgroundBtn">
+				<td class="buttons" colspan="2">
+					<button  name="submitBtn" alt= "Submit">Submit</button>
+					<button name="clearBtn" alt= "Clear">Clear This Form</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

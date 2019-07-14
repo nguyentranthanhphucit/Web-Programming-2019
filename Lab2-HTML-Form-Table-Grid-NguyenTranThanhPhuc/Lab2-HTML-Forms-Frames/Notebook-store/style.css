@@ -1,0 +1,29 @@
+h1 {
+	font-weight: bold;
+	font-size: 24px;
+}
+h3 {
+	text-align: center;
+}
+.hoverBrand:hover {
+	background-color: #369FFD;
+}
+img {
+	width: 150px;
+	height: 100px;
+}
+table {
+	border-collapse: collapse;
+}
+.firstBackground {
+	background-color: #73C6C3;
+}
+.secondBackground {
+	background-color: #8CDAD8;
+}
+.lastBackground {
+	background-color: #63DDD9;
+}
+.price {
+	text-align: center;
+}
