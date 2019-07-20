@@ -1,0 +1,20 @@
+.tableFather {
+	border-collapse: collapse;
+	width: 550px;
+}
+img {
+	width: 50px;
+	height: auto;
+}
+span {
+	vertical-align: top;
+}
+.titleColor {
+	background-color: lightgreen;
+}
+.colorOdd {
+	background-color: teal;
+}
+.colorEven {
+	background-color: silver;
+}

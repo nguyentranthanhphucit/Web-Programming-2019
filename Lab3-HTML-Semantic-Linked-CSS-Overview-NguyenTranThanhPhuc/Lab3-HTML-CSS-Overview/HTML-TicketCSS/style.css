@@ -1,0 +1,29 @@
+.circleColor {
+	color: #F13FB0;
+}
+.textColor {
+	color: #0008FF;
+}
+.textColor2 {
+	color: #E1301B;
+}
+.textColor3 {
+	color: #175604;
+}
+label {
+	font-weight: bold;
+}
+table {
+	background: #E985C5;
+	width: 400px;
+}
+.textDistance {
+	padding-bottom: 20px;
+}
+.textDistance2 {
+	padding-top: 10px;
+}
+.textDistance3 {
+	padding-bottom: 15px;
+	padding-top: 10px
+}

@@ -1,0 +1,93 @@
+body{
+	font-family: "Times New Roman";
+	background: teal;
+}
+
+.theHeader{
+    text-align: center;
+	font-size: 69px;
+    color:white;
+}
+
+h1 {
+	font-weight: bold;
+ 	font-size: 36px;
+	color: white;
+}
+
+nav {
+	font-weight: bold;
+	text-align: center;
+	font-size: 24px;
+	color: white;
+}
+
+/*Solution1
+header > nav > ul {
+	list-style-type: none;
+}
+*/
+
+ul {
+	list-style-type: none;
+}
+
+/*Solution1
+header > nav > ul > li > a {
+	color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}*/
+
+/*Solution2*/
+.textFormated {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+	color: white;
+}
+
+.current {
+	background-color: rgba(174, 182, 191, 0.95);
+}
+
+/*Solution1
+body > header > nav > ul > li:nth-child(4) > a {
+    text-decoration: underline;
+}*/
+
+/*Solution2*/
+.textUnderline {
+	text-decoration: underline;
+}
+
+/*Solution1
+footer > p > a {
+    color:black;
+    text-decoration:none;
+}*/
+
+/*Solution2*/
+.noneHref {
+	text-decoration: none;
+	color: black;
+}
+
+/*Solution1
+body > footer{
+    text-align: center;
+}*/
+
+/*Solution2*/
+.textCenter {
+	text-align: center;
+}
+
+.textLeft {
+	text-align: left;
+	background-color: white;
+}
+.displayNone {
+	display: none;
+}
