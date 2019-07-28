@@ -1,0 +1,105 @@
+.noneBorder {
+	border: 5px none #229954;
+}
+.hiddenBorder {
+	border: 6px hidden red;
+}
+.dottedBorder {
+	width: 100px;
+	height: 200px;
+	border: 7px dotted yellow;
+	border-radius: 50%;
+	background: lightblue;
+	opacity: 0.5;
+}
+.dashedBorder {
+	border: 8px dashed pink;
+	background-repeat: no-repeat;
+	width: 60%;
+	height: 500px;
+	background-image: url("https://zone-trt-bhxtb9xxzrrdpzhqr.netdna-ssl.com/wp-content/uploads/2017/06/sugar-club-bangkok-860x572.jpg");
+}
+.solidBorder {
+	border: 9px solid green;
+}
+.doubleBorder {
+	border: 8px double grey;
+}
+.grooveBorder {
+	border: 7px groove brown;
+}
+.ridgeBorder {
+	border: 6px ridge lightblue;
+}
+.insetBorder {
+	border: 5px inset purple;
+}
+.outsetBorder {
+	border: 4px outset salmon;
+	box-shadow: 20px 20px 10px red;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+.othersBorder {
+	border-top: 15px dashed green;
+	border-right: 20px double #46C41E;
+	border-bottom: 25px groove lightblue;
+	border-left: 10px solid red;
+	box-shadow: 20px 20px 10px #ABCDEF;
+}
+.othersBorderRadius{
+	border-top: 15px dashed green;
+	border-right: 25px double #46C41E;
+	border-bottom: 10px groove lightblue;
+	border-left: 10px solid red;
+	/*border-top-left-radius: 5px;
+	border-top-right-radius: 300px;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 20%; */
+	border-radius: 10px 20px 30px 40px;
+}
+h2 {
+	text-align: center;
+	font-weight: bold;
+	color: blue;
+	font-size: 36px;
+}
+.divFather1 {
+	border: 2px dotted green;
+	width: 100%;
+	height: 150px;
+	font-size: 18px;
+}
+.childBorderA {
+	border: 3px dashed pink;
+	width: 75%;
+	height: 85px;
+	display: inline-block;
+	box-sizing: border-box;
+	float: left;
+}
+.childBorderB {
+	border: 4px solid black;
+	width: 25%;
+	height: 60px;
+	display: inline-block;
+	box-sizing: border-box;
+	float: right;
+}
+.divFather2 {
+	border: 5px groove pink;
+	margin-top: 100px;
+	width:100%;
+	height: 100px; 
+	position: relative;
+}
+.childBorderC {
+	border: 6px ridge lightgreen;
+	width: 10%;
+	height: auto; 
+	position: absolute;
+	background-color: lightpink;
+	top: 0px;
+	right: 0px;
+	text-align: center;
+}

@@ -1,0 +1,64 @@
+.navCSS {
+	list-style-type: none;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+.navCSS > li {
+	display: inline-block; /*cho danh muc hàng ngang*/
+	padding: 10px 5px;
+	position: relative;
+}
+.navCSS > li:hover {
+	background-color: #f58220;
+}
+.navCSS > li:hover > a {
+	color: white;
+}
+
+.navCSS >li:hover > .childNavCSS {
+	display: block;
+}
+.navCSS > li > a {
+	color: #00384d;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+.childNavCSS {
+	list-style-type: none;
+	position: absolute;
+	width: 150px;
+	background-color: lightgreen;
+	top: 30px;
+	left: 0px;
+	padding: 0px;
+	margin: 0px;
+	text-align: left;
+	display: none;
+}
+.childNavCSS > a {
+	color: #00384d;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+.childNavCSS > li:hover {
+	background-color: lightpink;
+}
+.childNavCSS > li {
+	padding: 10px 20px;
+	background-color: lightblue;
+}
+.childNavCSS > li > a {
+	color: #00384d;
+	font-weight: bold;
+}
+.childNavCSS > li:hover > a {
+	text-decoration: none;
+	color: white;
+}

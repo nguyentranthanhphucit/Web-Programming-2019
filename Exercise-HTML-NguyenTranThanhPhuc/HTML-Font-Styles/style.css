@@ -1,0 +1,65 @@
+.borderFather {
+	width: 55%;
+	height: 700px;
+	border-spacing: 20px;
+}
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 36px;
+	color: blue;
+	text-align: center;
+}
+.width200 {
+	width: 200px;
+}
+.font17em {
+	font-size: 1.7em;
+}
+.font20px {
+	font-size: 20px;
+}
+.textBlue10998237 {
+	color: #6D62ED;
+}
+.fontFamily {
+	font-family: default;
+}
+.fontFamilyConsolas {
+	font-family: Consolas;
+}
+.fontFamilyArial {
+	font-family: Arial;
+}
+.fontFamilyVerdana {
+	font-family: Verdana;
+}
+.fontWeightLight {
+	font-weight: lighter;
+}
+.fontWeightNormal {
+	font-weight: normal;
+}
+.fontWeightBold {
+	font-weight: bold;
+}
+.fontStyleDefault {
+	font-style: default;
+}
+.fontStyleItalic {
+	font-style: italic;
+}
+.fontStyleOblique {
+	font-style: oblique;
+}
+.textDecorationNone {
+	text-decoration: none;
+}
+.textDecorationUnderline {
+	text-decoration: underline;
+}
+.textDecorationBlink {
+	text-decoration: blink;
+}
+.textDecorationLineThrough {
+	text-decoration: line-through;
+}

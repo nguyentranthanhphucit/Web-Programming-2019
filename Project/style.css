@@ -1,0 +1,22 @@
+.headerLogo {
+	background-size: initial;
+	background-repeat: no-repeat;
+}
+.wrap {
+	max-width: 1180px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #AAA;
+}
+.col1 {
+	border: 2px solid red;
+}
+.sub-menu > li {
+	list-style-type: none;
+	float: left;
+}
+.navHeader > ul {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
