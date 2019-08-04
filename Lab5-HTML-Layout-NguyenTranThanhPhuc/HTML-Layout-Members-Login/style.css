@@ -1,0 +1,56 @@
+.card-img-top {
+	width: 80px;
+	height: 80px;
+}
+.formMenu {
+	display: inline-block;
+}
+.textSize {
+	font-size: 28px;
+	color: white;
+	font-family: Tahoma;
+}
+form > input {
+	height: 30px;
+}
+.wrap {
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.marginLeft {
+	margin-left: 30px;
+}
+.btnRadius {
+	border-radius: 10px;
+	border: 1px solid white;
+	width: 70px;
+	height: 30px;
+	background: rgb(228,14,14);
+	background: linear-gradient(180deg, rgba(228,14,14,1) 5%, rgba(251,138,138,1) 95%);
+	color: white;
+}
+.title {
+	color: #D9C349;
+	font-weight: bold;
+}
+.divMenu {
+	border-radius: 10px 10px 0px 0px;
+	padding: 20px;
+	background-color: #3F404B;
+}
+.divContent {
+	padding: 20px;
+	background-color: #605F5C;
+	border-radius: 0px 0px 10px 10px;
+}
+p {
+	font-family: Georgia;
+	color: #AEAEB8;
+}
+.textColor {
+	color: white;
+}
+.marginTop {
+	margin-top: 30px;
+}

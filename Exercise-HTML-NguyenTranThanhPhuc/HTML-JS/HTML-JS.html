@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML-JS-NguyenTranThanhPhuc</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/javascript" href="script.js">
+	</head>
+	<body>
+		<script type="text/javascript">
+							// Tính toán cơ bản
+			// var sum = 0, flag = 1;
+			// while (flag <= 99) {
+			// 	if (flag % 2 != 0) {
+			// 		sum += flag;
+			// 	}
+			// 	flag++;
+			// }
+			// alert(sum);
+
+			// var array, len, array2, i, j;
+			// array=[1,2,3,4,5];
+			// array2=[];
+			// len = array.length;
+			// for (i = len-1; i >=0 ; i--) {
+			// 	array2.push(array[i]);
+			// }
+
+							// Tạo mảng và sửa tên phần tử trong mảng
+
+			// var array, name;
+			// array = [
+			// 	'Le Van Dat',
+			// 	'Kha Banh',
+			// 	'Tran Hao Nam',
+			// 	'Ga Rung',
+			// 	'Hong Kim Bao'];
+			// for (name in array) {
+			// 	document.writeln(array[name] + "<br>");
+			// }
+			// document.writeln("<br>");
+			// document.writeln("Sau sua<br>");
+			// document.writeln("<br>");
+			// array[3] = ["Con Ga Rung"];
+			// for (name in array) {
+			// 	document.writeln(array[name] + "<br>")
+			// }
+
+								//Thêm và xóa phần tử sau mảng
+
+			// var array, name;
+			// array = [
+			// 	'Le Van Dat',
+			// 	'Kha Banh',
+			// 	'Tran Hao Nam',
+			// 	'Ga Rung',
+			// 	'Hong Kim Bao'];
+			// array.push("Thap Tam Muoi");
+			// for (name in array) {
+			// 	document.writeln(array[name] + "<br>");
+			// }
+			// document.writeln("<br><b>Xoa Chi Thap Tam Muoi vi them nham</b><br><br>");
+			// array.pop(array[array.length-1]);
+			// for (name in array) {
+			// 	document.writeln(array[name] + "<br>");
+			// }
+
+								// Thêm và xóa phần tử ở đầu mảng
+
+			// var array, name;
+			// array = [
+			// 	'Le Van Dat',
+			// 	'Kha Banh',
+			// 	'Tran Hao Nam',
+			// 	'Ga Rung',
+			// 	'Hong Kim Bao'];
+			// array.unshift("Thap Tam Muoi");
+			// for (name in array) {
+			// 	document.writeln(array[name] + "<br>");
+			// }
+			// document.writeln("<br><b>Xoa Chi Thap Tam Muoi vi them nham</b><br><br>");
+			// array.shift(array[0]);
+			// for (name in array) {
+			// 	document.writeln(array[name] + "<br>");
+			// }
+
+								// indexof trong mảng
+
+			// var array, name, findIndexOf, findlastIndexOf;
+			// array = [
+			// 	'Le Van Dat',
+			// 	'Kha Banh',
+			// 	'Tran Hao Nam',
+			// 	'Ga Rung',
+			// 	'Hong Kim Bao'];
+			// array.unshift("Thap Tam Muoi");
+			// for (name in array) {
+			// 	document.writeln(array[name] + "<br>");
+			// }
+			// document.writeln("<br><b>Vi tri cua phan tu va bat dau tim tu vi tri tu dau den cuoi cua mang: </b>" + array[0] + " la" );
+			// findIndexOf = array.indexOf("Thap Tam Muoi");
+			// document.writeln(findIndexOf);
+
+			// document.writeln("<br><b>Vi tri cua phan tu va bat dau tim tu vi tri cuoi den dau cua mang: </b>" + array[0] + " la" );
+			// findlastIndexOf = array.lastIndexOf("Thap Tam Muoi");
+			// document.writeln(findlastIndexOf);
+
+
+									// tạo hàm không tham số
+
+
+			// function forLoop() {
+			// 	for (name in array) {
+			// 		document.writeln(array[name] + "<br>");
+			// 	}
+			// }
+			// var array, name, findIndexOf, findlastIndexOf;
+			// array = [
+			// 	'Le Van Dat',
+			// 	'Kha Banh',
+			// 	'Tran Hao Nam',
+			// 	'Ga Rung',
+			// 	'Hong Kim Bao'];
+			// array.unshift("Thap Tam Muoi");
+			// forLoop();
+			// // for (name in array) {
+			// // 	document.writeln(array[name] + "<br>");
+			// // }
+			// document.writeln("<br><b>Vi tri cua phan tu va bat dau tim tu vi tri tu dau den cuoi cua mang: </b>" + array[0] + " la" );
+			// findIndexOf = array.indexOf("Thap Tam Muoi");
+			// document.writeln(findIndexOf);
+
+			// document.writeln("<br><b>Vi tri cua phan tu va bat dau tim tu vi tri cuoi den dau cua mang: </b>" + array[0] + " la" );
+			// findlastIndexOf = array.lastIndexOf("Thap Tam Muoi");
+			// document.writeln(findlastIndexOf);
+
+
+									// tạo hàm có tham số
+
+
+			// function forLoop(array) {
+			// 	for (name in array) {
+			// 		document.writeln(array[name] + "<br>");
+			// 	}
+			// }
+			// var array, array2, name, findIndexOf, findlastIndexOf;
+			// array = [
+			// 	'Le Van Dat',
+			// 	'Kha Banh',
+			// 	'Tran Hao Nam',
+			// 	'Ga Rung',
+			// 	'Hong Kim Bao'];
+			// array.unshift("Thap Tam Muoi");
+			// forLoop(array);
+			// // for (name in array) {
+			// // 	document.writeln(array[name] + "<br>");
+			// // }
+			// document.writeln("<br>");
+			// array2 = [
+			// 	'Le Van Dat',
+			// 	'Kha Banh',
+			// 	'Tran Hao Nam',
+			// 	'Ga Rung',
+			// 	'Hong Kim Bao',
+			// 	'Phu le'];
+			// array2.unshift("Thap Tam Muoi");
+			// forLoop(array2);
+
+
+			function kiemTraTonTai(hoten, array) {
+				var findIndexOf = array.indexOf(hoten);
+				if (findIndexOf >=0) {
+					document.writeln('Đúng rồi' + ' nó đó');
+				} else {
+					document.writeln('Không có,' + ' Đại ca hổng biết người này');
+				}
+			}
+			function forLoop(array) {
+				for (name in array) {
+					document.writeln(array[name] + "<br>");
+				}
+			}
+			var array, fullName;
+			document.writeln("<h1>Lớp học Giang Hồ</h1>");
+			array = [
+				'Le Van Dat',
+				'Kha Banh',
+				'Tran Hao Nam',
+				'Ga Rung',
+				'Hong Kim Bao'];
+			forLoop(array);
+			fullName = "Ga Con";
+			document.writeln("<br><b>Kiểm tra xem có tên của:</b> " + fullName + " có trong lớp không?<br><br>");
+			kiemTraTonTai(fullName, array);
+		</script>
+	</body>
+</html>
