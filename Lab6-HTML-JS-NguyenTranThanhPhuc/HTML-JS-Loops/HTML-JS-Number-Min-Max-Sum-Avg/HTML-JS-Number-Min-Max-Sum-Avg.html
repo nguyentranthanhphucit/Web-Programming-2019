@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>HTML-JS-NumberForm1toN-NguyenTranThanhPhuc</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<!-- <form>
+			<div>
+				<table>
+					<tr>
+						<td>
+							<input type="text" id="numTyper" name="num">
+						</td>
+						<td>
+							<button>OK</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" id="iMinNumber" name="iMin">
+						</td>
+						<td>
+							<input type="text" id="iMaxNumber" name="iMax">
+						</td>
+						<td>
+							<input type="text" id="iSumNumber" name="iSum">
+						</td>
+						<td>
+							<input type="text" id="iAvgNumber" name="iAvg">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form> -->
+		<input type="text" id="numTyper" name="num">
+		<button type="button" onclick="All()">OK</button>
+		<script type="text/javascript">
+			function All() {
+				var numberTyper = document.getElementById("numTyper").value;
+				var splitArray = numberTyper.split(" ");
+				var sum = 0;
+				var avg = 0;
+				var min = parseInt(splitArray[0]);
+				var max = parseInt(splitArray[0]);
+
+				for (var index in splitArray) {
+					if (min < parseInt(splitArray[index])) {
+						min = parseInt(splitArray[index]);
+					}
+					if (max > parseInt(splitArray[index])) {
+						max = parseInt(splitArray[index]);
+					}
+					sum += parseInt(splitArray[index]);
+					avg = sum / splitArray.length;
+				}
+				document.writeln("Min: " + min + "<br>" + "Max:" + max + "<br>" + "Sum: " + sum + "<br>" + "AVG: " + avg);
+			}
+		</script>
+	</body>
+</html>

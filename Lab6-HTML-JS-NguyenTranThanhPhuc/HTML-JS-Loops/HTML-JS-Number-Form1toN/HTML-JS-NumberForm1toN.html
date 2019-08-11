@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>HTML-JS-NumberForm1toN-NguyenTranThanhPhuc</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<form>
+			<table>
+				<tr>
+					<td><input type="text" id="realNumber" name="num"></td>
+					<td><button type="button"  onclick="printNumber()">OK</button></td>
+				</tr>
+			</table>
+		</form>
+		<div><label>Result:</label></div>
+		<div><textarea name="result" id="txtaRes"></textarea></div>
+
+		<script type="text/javascript">
+			function printNumber() {
+				var number = document.getElementById("realNumber").value;
+				var str = "";
+				for (var i = 1; i <= number; i++) {
+					str += i + " ";
+				}
+				document.getElementById("txtaRes").innerHTML = str;
+			}
+		</script>
+	</body>
+</html>

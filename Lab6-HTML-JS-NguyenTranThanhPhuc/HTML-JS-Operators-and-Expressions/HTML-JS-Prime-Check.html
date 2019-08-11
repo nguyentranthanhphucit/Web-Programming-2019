@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>HTML-JS-Prime-Check-NguyenTranThanhPhuc</title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<form>
+			<table>
+				<tr>
+					<td><input type="input" name="num"></td>
+					<td><button type="button" onclick="checkPrime()">OK</button></td>
+				</tr>
+			</table>
+			<div class="margin">
+				<div></div><label>Result:</label></div>
+				<div><input type="res" name="result"></div>
+			</div>
+		</form>
+
+		<script type="text/javascript">
+			function checkPrime() {
+				var numberCheckPrime = document.getElementsByName("num")[0].value;
+				var count = 1;
+				for (var i = 2; i <= Math.round(Math.sqrt(numberCheckPrime)); i++) {
+					if(numberCheckPrime % i === 0) {
+						count++;
+						break;
+					}
+				}
+				if (count < 2 && numberCheckPrime >=2) {
+					document.getElementsByName("result")[0].value = "True";
+				} else {
+					document.getElementsByName("result")[0].value = "False";
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>HTML-JS-Parsing-Numbers-NguyenTranThanhPhuc</title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<table border="1px" cellpadding="20px">
+			<tr>
+				<td>str</td>
+				<td>parseInt(str)</td>
+				<td>parseFloat(str)</td>
+				<td>Number(str)	</td>
+				<td>+str</td>
+				<td>str | 0</td>
+			</tr>
+			<tr>
+				<td>'1234'</td>
+				<td><span id="pI_1"></span></td>
+				<td><span id="pF_1"></span></td>
+				<td><span id="num_1"></span></td>
+				<td><span id="plus_1"></span></td>
+				<td><span id="strDivide_1"></span></td>
+			</tr>
+			<tr>
+				<td>'1238abc'</td>
+				<td><span id="pI_2"></span></td>
+				<td><span id="pF_2"></span></td>
+				<td><span id="num_2"></span></td>
+				<td><span id="plus_2"></span></td>
+				<td><span id="strDivide_2"></span></td>
+			</tr>
+			<tr>
+				<td>'0.15'</td>
+				<td><span id="pI_3"></span></td>
+				<td><span id="pF_3"></span></td>
+				<td><span id="num_3"></span></td>
+				<td><span id="plus_3"></span></td>
+				<td><span id="strDivide_3"></span></td>
+			</tr>
+			<tr>
+				<td>'3.14ivan'</td>
+				<td><span id="pI_4"></span></td>
+				<td><span id="pF_4"></span></td>
+				<td><span id="num_4"></span></td>
+				<td><span id="plus_4"></span></td>
+				<td><span id="strDivide_4"></span></td>
+			</tr>
+			<tr>
+				<td>'Infinity'</td>
+				<td><span id="pI_5"></span></td>
+				<td><span id="pF_5"></span></td>
+				<td><span id="num_5"></span></td>
+				<td><span id="plus_5"></span></td>
+				<td><span id="strDivide_5"></span></td>
+			</tr>
+			<tr>
+				<td>'99999999999999999999'</td>
+				<td><span id="pI_6"></span></td>
+				<td><span id="pF_6"></span></td>
+				<td><span id="num_6"></span></td>
+				<td><span id="plus_6"></span></td>
+				<td><span id="strDivide_6"></span></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			document.getElementById("pI_1").innerHTML = parseInt('1234');
+			document.getElementById("pF_1").innerHTML = parseFloat('1234');
+			document.getElementById("num_1").innerHTML = Number('1234');
+			document.getElementById("plus_1").innerHTML = +('1234');
+			document.getElementById("strDivide_1").innerHTML = ('1234') | 0;
+
+			document.getElementById("pI_2").innerHTML = parseInt('1238abc');
+			document.getElementById("pF_2").innerHTML = parseFloat('1238abc');
+			document.getElementById("num_2").innerHTML = Number('1238abc');
+			document.getElementById("plus_2").innerHTML = +('1238abc');
+			document.getElementById("strDivide_2").innerHTML = ('1238abc') | 0;
+			
+			document.getElementById("pI_3").innerHTML = parseInt('0.15');
+			document.getElementById("pF_3").innerHTML = parseFloat('0.15');
+			document.getElementById("num_3").innerHTML = Number('0.15');
+			document.getElementById("plus_3").innerHTML = +('0.15');
+			document.getElementById("strDivide_3").innerHTML = ('0.15') | 0;
+
+			document.getElementById("pI_4").innerHTML = parseInt('3.14ivan');
+			document.getElementById("pF_4").innerHTML = parseFloat('3.14ivan');
+			document.getElementById("num_4").innerHTML = Number('3.14ivan');
+			document.getElementById("plus_4").innerHTML = +('3.14ivan');
+			document.getElementById("strDivide_4").innerHTML = ('3.14ivan') | 0;
+
+			document.getElementById("pI_5").innerHTML = parseInt('Infinity');
+			document.getElementById("pF_5").innerHTML = parseFloat('Infinity');
+			document.getElementById("num_5").innerHTML = Number('Infinity');
+			document.getElementById("plus_5").innerHTML = +('Infinity');
+			document.getElementById("strDivide_5").innerHTML = ('Infinity') | 0;
+
+			document.getElementById("pI_6").innerHTML = parseInt('99999999999999999999');
+			document.getElementById("pF_6").innerHTML = parseFloat('99999999999999999999');
+			document.getElementById("num_6").innerHTML = Number('99999999999999999999');
+			document.getElementById("plus_6").innerHTML = +('99999999999999999999');
+			document.getElementById("strDivide_6").innerHTML = ('99999999999999999999') | 0;
+		</script>
+	</body>
+</html>
