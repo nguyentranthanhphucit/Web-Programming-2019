@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+	<html>
+<head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <title>JS-JQuery-Events-NguyenTranThanhPhuc</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>DANH SÁCH SINH VIÊN</h1>
+            <div class="Group-SV" id="Group-SV">
+                <div class="row">
+                    <div class="col-1 border border-dark">STT</div>
+                    <div class="col-4 border border-dark">Họ và tên</div>
+                    <div class="col-4 border border-dark">MSSV</div>
+                    <div class="col-3 border border-dark">Chức năng</div>                    
+                </div>
+
+                <div class="row" id="Group-New">
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="HoTen" placeholder="Enter Họ và tên">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="MSSV" placeholder="Enter MSSV">
+                    </div>
+                    <div class="col-3">
+                        <button type="button" class="btn btn-primary" id="New">Thêm mới</button>
+                    </div>
+                </div>
+
+                <!-- <div class="row">
+                    <div class="col-1">1</div>
+                    <div class="col-4">Nguyễn A</div>
+                    <div class="col-4">22541</div>
+                    <div class="col-3">
+                        <button type="button" class="btn btn-warning Edit" onclick="Edit(this)">Edit</button>
+                        <button type="button" class="btn btn-danger Del" onclick="Del(this)">Del</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1">2</div>
+                    <div class="col-4">Nguyễn AV</div>
+                    <div class="col-4">2254155</div>
+                    <div class="col-3">
+                        <button type="button" class="btn btn-warning Edit">Edit</button>
+                        <button type="button" class="btn btn-danger Del" onclick="Del(this)">Del</button>
+                    </div>
+                </div>  -->
+            </div>
+        </div>
+            
+        <script type="text/javascript">
+                // var _DSSV = [
+                //     {
+                //         "HoTen" : "Nguyễn Văn A",
+                //         "MSSV"  : "2230",
+                //         "Email" : "a@student.com"
+                //     },
+                //     {
+                //         "HoTen" : "Đoàn Văn B",
+                //         "MSSV"  : "2227",
+                //         "Email" : "b@student.com"
+                //     },
+                //     {
+                //         "HoTen" : "Đỗ Thị C",
+                //         "MSSV"  : "2219",
+                //         "Email" : "c@student.com"
+                //     },
+                // ];
+                var DSs;
+                
+                // Lấy dữ liệu từ server
+                $.post(
+                    "http://45.32.20.144/",
+                    {
+                        "DanhSach" : "SV",
+                    },
+                    function(_DSSV) {
+                        DSs = _DSSV;
+                        ListDS(_DSSV);
+                    },
+                    "json"
+                    );
+
+            // Hàm hiển thị danh sách
+            function ListDS(_DSSV) {
+                for(let _index in _DSSV) {
+                    let STT = +_index + 1;
+                    let _str = '<div class="row"><div class="col-1">' + STT + '</div><div class="col-4">' + _DSSV[_index].HoTen + '</div><div class="col-4">' + _DSSV[_index].MSSV  + '</div><div class="col-3"><button type="button" class="btn btn-warning Edit" onclick="Edit(this)">Edit</button><button type="button" class="btn btn-danger Del" onclick="Del(this)">Del</button></div></div>';
+
+                    $("#Group-SV").append(_str);
+                }
+            }
+
+            $("#New").click(function(){
+                var _HoTen = $("#HoTen").val();
+                var _MSSV = $("#MSSV").val();
+                if ($(this).attr("status") == "New") {
+                    let _str = '<div class="row"><div class="col-1"></div><div class="col-4">' + _HoTen + '</div><div class="col-4">' + _MSSV  + '</div><div class="col-3"><button type="button" class="btn btn-warning Edit" onclick="Edit(this)">Edit</button><button type="button" class="btn btn-danger Del" onclick="Del(this)">Del</button></div></div>';
+                    $("#Group-New").after(_str);
+                } else {
+
+                    // Cập nhật lại nút thêm mới
+                    $("#New").html("New");
+                    $("#New").attr("status", "New");
+
+                    // Xóa dữ liệu input
+                    $("#HoTen").val("");
+                    $("#MSSV").val("");
+
+                    // Thêm vào sau nút Editing
+                    let _str = '<div class="row"><div class="col-1"></div><div class="col-4">' + _HoTen + '</div><div class="col-4">' + _MSSV  + '</div><div class="col-3"><button type="button" class="btn btn-warning Edit" onclick="Edit(this)">Edit</button><button type="button" class="btn btn-danger Del" onclick="Del(this)">Del</button></div></div>';
+                    $(".Editing").after(_str);
+
+                    // Xóa nút cũ
+                    $(".Editing").remove();
+                }
+
+            });
+
+            function Del(e) {
+                var _confirm = confirm("Are you sure?");
+                if (_confirm) {
+                    $(e).parents(".row").remove();
+                }
+            }
+
+            function Edit(e) {
+                $(e).parents(".row").addClass("Editing");
+                _node = $(e).parents(".row").find(".col-4").first();
+                var _HoTen = _node.html();
+                var _MaSS = _node.next().html();
+
+                // Gán lên Input
+                $("#HoTen").val(_HoTen);
+                $("#MSSV").val(_MaSS);
+
+                // Gán trạng thái
+                $("#New").html("Update");
+                $("#New").attr("status", "Update");
+            }
+            // DSs.unshift({
+            //     "HoTen" : _HoTen,
+            //     "MSSV" : _MSSV
+            // });
+            // ListDS(DSs);
+        </script>
+        
+		<!-- Optional JavaScript -->
+	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
