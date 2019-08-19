@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <title>JS-JQuery-Events-NguyenTranThanhPhuc</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+            <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>DANH SÁCH SINH VIÊN</h1>
+        <div class="wrap">
+            <div class="Group-SV" id="Group-SV">
+                <div class="row">
+                    <div class="col-1 border border-dark">STT</div>
+                    <div class="col-4 border border-dark">Họ và Tên</div>
+                    <div class="col-4 border border-dark">MSSV</div>
+                    <div class="col-3 border border-dark">Chức năng</div>
+                </div>
+            <div class="row" id="Group-New" >
+                <div class="col-1"></div>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="HoTen" aria-describedby="emailHelp" placeholder="Nhập họ và tên">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="MSSV" placeholder="Nhập mã số sinh viên">
+                    </div>
+                    <div class="col-3">
+                        <button  type="button" class="btn btn-primary" id="New">Thêm</button>
+                    </div>
+                </div>
+            </div>
+            <b><i><u>Choose background color: </u></i></b>
+            <input type="color" name="favcolor" class="colorSelected" value="#ff0000">
+            <button type="button" class="btn btn-primary" onclick="submitColor()">Click to surprise</button> 
+        </div>
+        <script type="text/javascript">
+            $.post(
+                "http://45.32.20.144/",
+                {
+                    "DanhSach" : "SV"
+                },
+                function(data){
+                    for(let index in data) {
+                        let STT = +index +1;
+                        _str =  '<div class="row"><div class="col-1">' + STT + '</div><div class = "col-4">' + data[index].HoTen + '</div><div class = "col-4">' + data[index].MSSV +'</div><div class="col-3"><button type="button" class="btn btn-warning Edit"onclick="Edit (this)">Edit</button><button type="button" class="btn btn-danger Del"onclick="Del (this)">Del</button></div></div>';
+                        $("#Group-SV").append(_str);
+                  }
+                },
+                    "json"  
+                );
+            $("#New").click(function(){
+                var _HoTen = $("#HoTen").val();
+                var _MSSV = $("#MSSV").val();
+                if($(this).attr("status") !="Update") {
+                    _str = '<div class="row"><div class="col-1"></div><div class = "col-4">' + _HoTen + '</div><div class = "col-4">' + _MSSV +'</div><div class="col-3"><button type="button" class="btn btn-warning Edit"onclick="Edit (this)">Edit</button><button type="button" class="btn btn-danger Del"onclick="Del (this)">Del</button></div></div>';
+                    // $("#Group-SV").append(_str);
+                    $("#Group-New").after(_str);
+                } else {
+                    $("#New").html("New");
+                    $("#New").attr("status","New");
+                    let _str = '<div class="row"><div class="col-1"></div><div class = "col-4">' + _HoTen + '</div><div class = "col-4">' + _MSSV +'</div><div class="col-3"><button type="button" class="btn btn-warning Edit"onclick="Edit (this)">Edit</button><button type="button" class="btn btn-danger Del"onclick="Del (this)">Del</button></div></div>';
+                    $(".Editing").after(_str);
+                    $("#HoTen").val("");
+                    $("#MSSV").val("");
+                    $(".Editing").remove();
+                }
+            });
+            function  Del(e) {
+                var _confirm = confirm("Bạn có chắc xóa không?");
+                if(_confirm) {
+                    $(e).parents(".row").remove();
+                }
+            }
+            function Edit(e) {
+                $(e).parents(".row").addClass("Editing");
+                _node = $(e).parents(".row").find(".col-4").first();
+                var _HoTen = _node.html();
+                var _MSSV = _node.next().html();
+                    // Gan len input
+                    $("#HoTen").val(_HoTen);
+                    $("#MSSV").val(_MSSV);
+                    $("#New").html("Update");
+                    $("#New").attr("status","Update");
+            }
+            $("#Update").click(function() {
+                var _HoTen = $("#HoTen").val();
+                var _MSSV = $("#MSSV").val(); 
+            });
+
+            function submitColor() {
+                var inputColor = $(".colorSelected").val();
+                $("body").css("background", inputColor);
+            }
+    	</script>
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
